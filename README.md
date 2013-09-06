@@ -1,2 +1,4 @@
-jok-pool-mobile-app
-===================
+Mobile App
+==========
+
+for mobile devices

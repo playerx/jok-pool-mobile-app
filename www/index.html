@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script>
+            function onLoad() {
+                document.addEventListener('deviceready', onDeviceReady, false);
+            }
+            function onDeviceReady() {
+                setTimeout(function() {
+                    document.location.assign('http://jok.io/mobile/');
+                }, 2000);
+            }
+        </script>
+        <style>
+            .logo {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100px;
+                height: 100px;
+                margin-left: -50px;
+                margin-top: -50px;
+            }
+        </style>
+    </head>
+    <body onload="onLoad();" style="background: #489e14;">
+        <img class="logo" src="icon.png" />
+    </body>
+</html>
