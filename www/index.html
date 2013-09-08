@@ -1,9 +1,13 @@
 <html>
     <head>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="js/cdv-plugin-fb-connect.js"></script>
-		<script type="text/javascript" src="js/facebook-js-sdk.js"></script>
+        <link href="hook.css?v=1" rel="stylesheet">
+        
+        <script src="phonegap.js"></script>
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/cdv-plugin-fb-connect.js"></script>
+		<script src="js/facebook-js-sdk.js"></script>
+		<script src="js/mousewheel.js"></script>
+        <script src="js/hook.min.js"></script>
 		
         <script>
             var ROOT_LOCATION = 'http://test.jok.io/lobby/billiard/';
@@ -17,7 +21,6 @@
                 $('#Buttons').show();
                 
                  try {
-                    alert('Device is ready! Make sure you set your app_id below this alert.');
                     FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
                 } catch (e) {
                     alert(e);
