@@ -27,6 +27,7 @@
     <feature name="http://api.phonegap.com/1.0/notification"/>
     
     
+    
     <!-- Common -->
     <preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation"      value="landscape" />
@@ -38,6 +39,8 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview"  value="false" />
 
+
+    <plugin name="Notification" value="CDVNotification" />
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
