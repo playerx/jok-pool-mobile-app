@@ -14,6 +14,8 @@
             
             function onLoad() {
                 document.addEventListener('deviceready', onDeviceReady, false);
+                
+                $('#hook').hook();
             }
             
             function onDeviceReady() {
@@ -69,6 +71,8 @@
             FB.Event.subscribe('auth.statusChange', function(response) {
                                alert('auth.statusChange event');
                                });
+                               
+            
         </script>
         <style>
             body{
@@ -80,13 +84,14 @@
         </style>
     </head>
     <body onload="onLoad();" style="background: #489e14;">
-        <img class="logo" src="icon.png" />
-        <div>Holla bolla</div>
-        <div id="Buttons" style="display:none">
-            <button onclick="ViewJS()">View JS</button>
-            <button onclick="VisitSite()">Visit Site</button>
-            <button onclick="FBLogin()">FB Login</button>
+        <div class="hook" id="hook">
+            <img class="logo" src="icon.png" />
+            <div>Holla bolla</div>
+            <div id="Buttons" style="display:none">
+                <button onclick="ViewJS()">View JS</button>
+                <button onclick="VisitSite()">Visit Site</button>
+                <button onclick="FBLogin()">FB Login</button>
+            </div>
         </div>
-        
     </body>
 </html>
