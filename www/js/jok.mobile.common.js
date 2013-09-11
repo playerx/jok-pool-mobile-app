@@ -18,6 +18,8 @@ function onDeviceReady() {
 function navigate(url) {
 
     if (!url) return;
+    
+    navigator.splashscreen.show();
 
     $.ajax({
         url: url,
@@ -27,9 +29,11 @@ function navigate(url) {
         },
         success: function (data) {
             $('#MobileSiteContentContainer').html(data);
+            navigator.splashscreen.hide();
         },
         error: function (err) {
             alert(err);
+            navigator.splashscreen.hide();
         }
     });
 }
