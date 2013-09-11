@@ -1,23 +1,5 @@
 <html>
     <head>
-        <script src="phonegap.js"></script>
-        <script src="js/jquery-1.9.1.js"></script>
-        <script src="js/cdv-plugin-fb-connect.js"></script>
-		<script src="js/facebook-js-sdk.js"></script>
-		
-        <script>
-            var ROOT_LOCATION = 'http://test.jok.io/lobby/billiard/';
-            
-            $('#MainFrame').attr('src', ROOT_LOCATION);
-            
-            $('#MainFrame').load(function() {
-                console.log('loaded');
-            });
-            
-            $('#MainFrame').unload(function() {
-                console.log('loaded');
-            });
-        </script>
         <style>
             body {
                 margin: 0;
@@ -31,11 +13,29 @@
                 top: 0;
                 height: 100%;
                 border: 0;
+                overflow: auto;
             }
         </style>
+        <script src="phonegap.js"></script>
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/cdv-plugin-fb-connect.js"></script>
+		<script src="js/facebook-js-sdk.js"></script>
     </head>
     <body onload="onLoad();">
-        <iframe id="MainFrame">
+        <iframe id="MainFrame" src="http://test.jok.io/lobby/billiard/">
         </iframe>
+        <script>
+            var ROOT_LOCATION = 'http://test.jok.io/lobby/billiard/';
+            
+            //$('#MainFrame').attr('src', ROOT_LOCATION);
+            
+            $('#MainFrame').load(function() {
+                console.log('loaded');
+            });
+            
+            $('#MainFrame').unload(function() {
+                console.log('loaded');
+            });
+        </script>
     </body>
 </html>
