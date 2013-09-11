@@ -20,7 +20,7 @@ function navigate(url) {
     if (!url) return;
     
     console.log('1')
-    navigator.splashscreen.show();
+    //navigator.splashscreen.show();
 
     $.ajax({
         url: url,
@@ -31,12 +31,12 @@ function navigate(url) {
         success: function (data) {
             console.log('2')
             $('#MobileSiteContentContainer').html(data);
-            navigator.splashscreen.hide();
+            //navigator.splashscreen.hide();
         },
         error: function (err) {
             console.log('3')
             alert(err);
-            navigator.splashscreen.hide();
+            //navigator.splashscreen.hide();
         }
     });
 }
