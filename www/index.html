@@ -13,6 +13,8 @@
         <script src="js/cdv-plugin-fb-connect.js"></script>
 		<script src="js/facebook-js-sdk.js"></script>
 		<script src="js/jok.mobile.common.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     </head>
     <body onload="onLoad();">
     
@@ -23,9 +25,9 @@
         
         <script>
         $(function(){
-            var ROOT_LOCATION = 'http://test.jok.io/lobby/billiard/';
+            var ROOT_LOCATION = 'http://test.jok.io';
             
-            navigate(ROOT_LOCATION);
+            navigate(ROOT_LOCATION + '/lobby/billiard/');
         })
         </script>
     </body>

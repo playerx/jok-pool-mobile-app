@@ -21,6 +21,8 @@ function navigate(url) {
     
     $('#MobileSiteContentLoadingBox').show();
     //navigator.splashscreen.show();
+    
+    url = ROOT_LOCATION + url;
 
     $.ajax({
         url: url,
