@@ -19,8 +19,8 @@ function navigate(url) {
 
     if (!url) return;
     
-    console.log('1')
-    navigator.splashscreen.show();
+    $('#MobileSiteContentLoadingBox').Show();
+    //navigator.splashscreen.show();
 
     $.ajax({
         url: url,
@@ -29,14 +29,15 @@ function navigate(url) {
             "jok": "ge"
         },
         success: function (data) {
-            console.log('2')
+            
             $('#MobileSiteContentContainer').html(data);
-            navigator.splashscreen.hide();
+            $('#MobileSiteContentLoadingBox').Hide();
+            //navigator.splashscreen.hide();
         },
         error: function (err) {
-            console.log('3')
             alert(err);
-            navigator.splashscreen.hide();
+            $('#MobileSiteContentLoadingBox').Hide();
+            //navigator.splashscreen.hide();
         }
     });
 }
