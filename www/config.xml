@@ -34,10 +34,9 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
     <!-- iOS -->
-    <preference name="webviewbounce"    value="false" />
+    <preference name="webviewbounce"    value="true" />
     <preference name="stay-in-webview"  value="true" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview"  value="false" />
 
 
 
