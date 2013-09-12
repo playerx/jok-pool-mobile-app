@@ -42,10 +42,15 @@ function navigate(url) {
     });
 }
 
+$(function () {
+    FastClick.attach(document.body);
+});
 
 $(document).on(clickEvent, 'a', function () {
     var url = $(this).attr('href');
 
+    console.log('navigating: ' + url)
+    
     if (url.indexOf('/') == 0) {
         navigate(url);
 
