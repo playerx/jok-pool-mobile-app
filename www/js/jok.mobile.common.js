@@ -19,7 +19,7 @@ function navigate(url) {
 
     if (!url) return;
     
-    $('#MobileSiteContentLoadingBox').Show();
+    $('#MobileSiteContentLoadingBox').show();
     //navigator.splashscreen.show();
 
     $.ajax({
@@ -31,12 +31,12 @@ function navigate(url) {
         success: function (data) {
             
             $('#MobileSiteContentContainer').html(data);
-            $('#MobileSiteContentLoadingBox').Hide();
+            $('#MobileSiteContentLoadingBox').hide();
             //navigator.splashscreen.hide();
         },
         error: function (err) {
             alert(err);
-            $('#MobileSiteContentLoadingBox').Hide();
+            $('#MobileSiteContentLoadingBox').hide();
             //navigator.splashscreen.hide();
         }
     });
