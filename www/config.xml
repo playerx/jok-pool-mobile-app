@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.jok.game.pool"
-        version   = "0.1.8">
+        version   = "0.1.9">
     <name>Jok Pool</name>
 
     <description>
@@ -62,10 +62,10 @@
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />
     
     <gap:splash src="img/splash/ios/Default.png"            gap:platform="ios" width="320" height="480" />
-    <gap:splash src="img/splash/ios/Default_at_2x.png"      gap:platform="ios" width="640" height="960" />
-    <gap:splash src="img/splash/ios/Default_iphone5.png"    gap:platform="ios" width="640" height="1136" />-->
+    <gap:splash src="img/splash/ios/Default_at_2x.png"      gap:platform="ios" width="640" height="960" />-->
+    <gap:splash src="img/splash/ios/Default_iphone5.png"    gap:platform="ios" width="640" height="1136" />
     <gap:splash src="img/splash/ios/Default-Landscape.png"  gap:platform="ios" width="1024" height="748" />
-    <!--<gap:splash src="img/splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+    <!--<gap:splash src="img/splash/ios/Default-Portrait.png"   gap:platform="ios" width="768" height="1004" />
     <gap:splash src="img/splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
     <gap:splash src="img/splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />-->
     
