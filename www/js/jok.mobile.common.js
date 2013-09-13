@@ -25,8 +25,12 @@ function navigate(url) {
     // ყველა შემდგომ დამატებული სტილის წაშლა
     $('head link:not([href^="css/"])').remove();
     
-    url = ROOT_LOCATION + url;
-
+    // თუ შიდა ნავიგაციაა, მივუწეროთ თავში სრული მისამართი
+    if (url.indexOf('http://') == -1 && url.indexOf('https://') == -1) {
+        url = ROOT_LOCATION + url;
+    }
+    
+    
     $.ajax({
         url: url,
         type: "GET",
