@@ -23,7 +23,7 @@ function navigate(url) {
     $('#MobileSiteContentLoadingBox').show();
     
     // ყველა შემდგომ დამატებული სტილის წაშლა
-    $('head link:not[data-mandatory=true').remove();
+    $('head link:not[data-mandatory=true]').remove();
     
     url = ROOT_LOCATION + url;
 
