@@ -23,7 +23,7 @@ function navigate(url) {
     $('#MobileSiteContentLoadingBox').show();
     
     // ყველა შემდგომ დამატებული სტილის წაშლა
-    $('head link:not([href|="css/"])').remove();
+    $('head link:not([href^="css/"])').remove();
     
     url = ROOT_LOCATION + url;
 
@@ -40,21 +40,22 @@ function navigate(url) {
         },
         error: function (err) {
             $('#MobileSiteContentLoadingBox').hide();
+            alert(err);
             
-            navigator.notification.confirm(
-                'Can''t load data, please check internet connection. Try again?', // message
-                 onConfirm,             // callback to invoke with index of button pressed
-                'Oops',                 // title
-                'No,Yes'                // buttonLabels
-            );
+            // navigator.notification.confirm(
+            //     'Can''t load data, please check internet connection. Try again?', // message
+            //      onConfirm,             // callback to invoke with index of button pressed
+            //     'Oops',                 // title
+            //     'No,Yes'                // buttonLabels
+            // );
         }
     });
     
-    function onConfirm(buttonIndex) {
-        if (buttonIndex != 2) return;
+    // function onConfirm(buttonIndex) {
+    //     if (buttonIndex != 2) return;
         
-        navigate(url);
-    }
+    //     navigate(url);
+    // }
 }
 
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
