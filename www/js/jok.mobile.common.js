@@ -19,8 +19,11 @@ function navigate(url) {
 
     if (!url) return;
     
+    // ჩატვირთვის ანიმაციის გამოჩენა
     $('#MobileSiteContentLoadingBox').show();
-    //navigator.splashscreen.show();
+    
+    // ყველა შემდგომ დამატებული სტილის წაშლა
+    $('head link:not[data-mandatory=true').remove();
     
     url = ROOT_LOCATION + url;
 
@@ -33,15 +36,25 @@ function navigate(url) {
         success: function (data) {
             
             $('#MobileSiteContentContainer').html(data);
-            $('#MobileSiteContentLoadingBox').hide();
-            //navigator.splashscreen.hide();
+            $('#MobileSiteContentLoadingBox').hide('fast');
         },
         error: function (err) {
-            alert(err);
             $('#MobileSiteContentLoadingBox').hide();
-            //navigator.splashscreen.hide();
+            
+            navigator.notification.confirm(
+                'Can''t load data, please check internet connection. Try again?', // message
+                 onConfirm,             // callback to invoke with index of button pressed
+                'Oops',                 // title
+                'No,Yes'                // buttonLabels
+            );
         }
     });
+    
+    function onConfirm(buttonIndex) {
+        if (buttonIndex != 2) return;
+        
+        navigate(url);
+    }
 }
 
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
