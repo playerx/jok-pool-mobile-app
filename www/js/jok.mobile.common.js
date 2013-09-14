@@ -38,7 +38,9 @@ function navigate(url) {
         success: function (data) {
             
             $('#MobileSiteContentContainer').html(data);
-            $('#MobileSiteContentLoadingBox').hide('fast');
+            $('#MobileSiteContentLoadingBox').hide();
+            
+            refreshAjaxSetup();
         },
         error: function (err) {
             $('#MobileSiteContentLoadingBox').hide();
@@ -84,6 +86,11 @@ $(document).on(clickEvent, 'a', function () {
 $(function () {
     FastClick.attach(document.body);
 
+    
+});
+
+function refreshAjaxSetup() {
+    
     $.ajaxSetup({
         beforeSend: function (xhr, settings) {
             console.log('ttt')
@@ -100,7 +107,7 @@ $(function () {
             console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
         }
     });
-});
+}
 
     // $.ajaxSetup({
     //     beforeSend: function (xhr, settings) {
