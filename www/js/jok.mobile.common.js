@@ -89,7 +89,9 @@ $(document).on(clickEvent, 'a', function () {
 
 $.ajaxSetup({
     beforeSend: function (xhr, settings) {
+        console.log('before:' + settings.url)
         settings.url = ROOT_LOCATION + settings.url;
+        console.log('after:' + settings.url)
     },
     error: function (xhr, status, error) {
         console.error("An AJAX error occured: " + status + "\nError: " + error);
