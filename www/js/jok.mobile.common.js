@@ -92,6 +92,8 @@ $.ajaxSetup({
         if (url.indexOf('http://') == -1 && url.indexOf('https://') == -1) {
             this.url = ROOT_LOCATION + this.url;
         }
+        
+        console.log(this.url);
     },
     error: function (xhr, status, error) {
         console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
