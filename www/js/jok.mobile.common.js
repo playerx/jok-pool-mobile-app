@@ -40,7 +40,7 @@ function navigate(url) {
             $('#MobileSiteContentContainer').html(data);
             $('#MobileSiteContentLoadingBox').hide();
             
-            refreshAjaxSetup();
+            refreshOnNavigate();
         },
         error: function (err) {
             $('#MobileSiteContentLoadingBox').hide();
@@ -83,13 +83,10 @@ $(document).on(clickEvent, 'a', function () {
     }
 });
 
-$(function () {
-    FastClick.attach(document.body);
 
+function refreshOnNavigate() {
     
-});
-
-function refreshAjaxSetup() {
+    FastClick.attach(document.body);
     
     $.ajaxSetup({
         beforeSend: function (xhr, settings) {
