@@ -44,7 +44,6 @@ function navigate(url) {
         },
         error: function (err) {
             $('#MobileSiteContentLoadingBox').hide();
-            alert(err);
             
             // navigator.notification.confirm(
             //     'Can''t load data, please check internet connection. Try again?', // message
@@ -87,3 +86,18 @@ $(document).on(clickEvent, 'a', function () {
         return false;
     }
 });
+
+$.ajaxSetup({
+    beforeSend: function (xhr, settings) {
+        settings.url = ROOT_LOCATION + settings.url;
+    },
+    error: function (xhr, status, error) {
+        console.error("An AJAX error occured: " + status + "\nError: " + error);
+    }
+});
+    
+
+
+
+
+
