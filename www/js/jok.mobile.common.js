@@ -89,8 +89,14 @@ $(document).on(clickEvent, 'a', function () {
 
 $.ajaxSetup({
     beforeSend: function (xhr, settings) {
+        console.log('ttt')
+        try{
         if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
             this.url = ROOT_LOCATION + this.url;
+        }
+        }
+        catch(err){
+            console.log(err);
         }
     },
     error: function (xhr, status, error) {
