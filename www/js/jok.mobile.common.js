@@ -87,7 +87,7 @@ $(document).on(clickEvent, 'a', function () {
     }
 });
 
-$.ajaxSetup({
+$.ajax({
     beforeSend: function (xhr, settings) {
         console.log('ttt')
         try{
