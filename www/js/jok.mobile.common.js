@@ -4,9 +4,7 @@ function onLoad() {
 }
             
 function onDeviceReady() {
-                
-    $('#Buttons').show();
-                
+
     try {
         FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
     } catch (e) {
@@ -71,10 +69,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
 }
 
-$(function () {
-    FastClick.attach(document.body);
-});
-
 $(document).on(clickEvent, 'a', function () {
     var url = $(this).attr('href');
 
@@ -87,24 +81,43 @@ $(document).on(clickEvent, 'a', function () {
     }
 });
 
-$.ajax({
-    beforeSend: function (xhr, settings) {
-        console.log('ttt')
-        try{
-        if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
-            this.url = ROOT_LOCATION + this.url;
-        }
-        }
-        catch(err){
-            console.log(err);
-        }
-    },
-    error: function (xhr, status, error) {
-        console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
-    }
-});
-    
+$(function () {
+    FastClick.attach(document.body);
 
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            console.log('ttt')
+            try{
+            if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
+                this.url = ROOT_LOCATION + this.url;
+            }
+            }
+            catch(err){
+                console.log(err);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
+        }
+    });
+});
+
+    // $.ajaxSetup({
+    //     beforeSend: function (xhr, settings) {
+    //         console.log('ttt')
+    //         try {
+    //             if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
+    //                 this.url = 'http://test.jok.io' + this.url;
+    //             }
+    //         }
+    //         catch (err) {
+    //             console.log(err);
+    //         }
+    //     },
+    //     error: function (xhr, status, error) {
+    //         console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
+    //     }
+    // });
 
 
 
