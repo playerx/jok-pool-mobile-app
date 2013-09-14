@@ -89,12 +89,12 @@ $(document).on(clickEvent, 'a', function () {
 
 $.ajaxSetup({
     beforeSend: function (xhr, settings) {
-        console.log('before:' + settings.url)
-        settings.url = ROOT_LOCATION + settings.url;
-        console.log('after:' + settings.url)
+        if (url.indexOf('http://') == -1 && url.indexOf('https://') == -1) {
+            this.url = ROOT_LOCATION + this.url;
+        }
     },
     error: function (xhr, status, error) {
-        console.error("An AJAX error occured: " + status + "\nError: " + error);
+        console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
     }
 });
     
