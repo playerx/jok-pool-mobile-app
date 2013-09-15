@@ -9,8 +9,8 @@
 
 #MobileSiteContentLoadingBox img {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    max-height: 40px;
     top: 50%;
     left: 50%;
     margin-left: -20px;
