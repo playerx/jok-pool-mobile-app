@@ -25,14 +25,9 @@
 		
 		<script>
             var ROOT_LOCATION = 'http://test.jok.io';
+            navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
         </script>
     </head>
     <body onload="onLoad();">
-        
-        <script>
-            $(function(){
-                navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
-            });
-        </script>
     </body>
 </html>

@@ -5,6 +5,8 @@ function onLoad() {
             
 function onDeviceReady() {
 
+    console.log('Device is ready!')
+    
     try {
         FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
     } catch (e) {
