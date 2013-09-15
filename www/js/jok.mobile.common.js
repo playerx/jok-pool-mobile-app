@@ -73,8 +73,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 $(document).on(clickEvent, 'a', function () {
     var url = $(this).attr('href');
-
-    console.log('navigating: ' + url)
     
     if (url.indexOf('/') == 0) {
         navigate(url);
@@ -90,7 +88,6 @@ function refreshOnNavigate() {
     
     $.ajaxSetup({
         beforeSend: function (xhr, settings) {
-            console.log('ttt')
             try{
             if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
                 this.url = ROOT_LOCATION + this.url;
