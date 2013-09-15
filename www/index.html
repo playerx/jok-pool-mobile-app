@@ -24,7 +24,16 @@
 		
 		<script>
             var ROOT_LOCATION = 'http://test.jok.io';
-            navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
+            
+            function onLoad() {
+                document.addEventListener('deviceready', onDeviceReady, false);
+            }
+                        
+            function onDeviceReady() {
+                console.log('Device is ready!')
+                
+                navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
+            }
         </script>
     </head>
     <body onload="onLoad();">

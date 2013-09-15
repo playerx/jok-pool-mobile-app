@@ -1,19 +1,4 @@
 
-function onLoad() {
-    document.addEventListener('deviceready', onDeviceReady, false);
-}
-            
-function onDeviceReady() {
-
-    console.log('Device is ready!')
-    
-    try {
-        FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
-    } catch (e) {
-        alert(e);
-    }
-}
-
 
 function navigate(url) {
 
