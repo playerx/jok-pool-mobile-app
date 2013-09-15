@@ -18,7 +18,7 @@ function navigate(url) {
     if (!url) return;
     
     // ჩატვირთვის ანიმაციის გამოჩენა
-    $('#MobileSiteContentLoadingBox').show();
+    $('body').append('<div id="MobileSiteContentLoadingBox"><img src="img/loading.gif" alt="Loading"/></div>');
     
     // ყველა შემდგომ დამატებული სტილის წაშლა
     $('head link:not([href^="css/"])').remove();
@@ -37,13 +37,15 @@ function navigate(url) {
         },
         success: function (data) {
             
-            $('#MobileSiteContentContainer').html(data);
-            $('#MobileSiteContentLoadingBox').hide();
+            $('body').html(data);
             
             refreshOnNavigate();
         },
         error: function (err) {
-            $('#MobileSiteContentLoadingBox').hide();
+            
+            $('#MobileSiteContentLoadingBox').remove();
+            
+            alert(err);
             
             // navigator.notification.confirm(
             //     'Can''t load data, please check internet connection. Try again?', // message

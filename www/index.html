@@ -21,23 +21,16 @@
 		<script src="js/jok.mobile.common.js"></script>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    </head>
-    <body onload="onLoad();">
-    
-        <div id="MobileSiteContentContainer"></div>
-        
-        <div id="MobileSiteContentLoadingBox">
-            <div>
-                <img src="img/loading.gif" alt="Loading"/>
-            </div>
-        </div>
-        
-        <script>
+		
+		<script>
             var ROOT_LOCATION = 'http://test.jok.io';
             
             $(function(){
                 navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
             });
         </script>
+    </head>
+    <body onload="onLoad();">
+        
     </body>
 </html>
