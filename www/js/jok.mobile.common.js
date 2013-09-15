@@ -105,24 +105,3 @@ function refreshOnNavigate() {
         }
     });
 }
-
-    // $.ajaxSetup({
-    //     beforeSend: function (xhr, settings) {
-    //         console.log('ttt')
-    //         try {
-    //             if (this.url.indexOf('http://') == -1 && this.url.indexOf('https://') == -1) {
-    //                 this.url = 'http://test.jok.io' + this.url;
-    //             }
-    //         }
-    //         catch (err) {
-    //             console.log(err);
-    //         }
-    //     },
-    //     error: function (xhr, status, error) {
-    //         console.error("An AJAX error occured: " + status + "\nError: " + error + "\nUrl: " + this.url);
-    //     }
-    // });
-
-
-
-
