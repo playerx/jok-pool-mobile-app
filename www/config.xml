@@ -75,5 +75,7 @@
         <param name="APP_ID" value="528732163816152" />
         <param name="APP_NAME" value="5ffd5e05c3c6008ea04867a5298af37c" />
     </gap:plugin>
+    
+    <gap:plugin name="com.phonegap.plugins.jokutils" />
 
 </widget>
