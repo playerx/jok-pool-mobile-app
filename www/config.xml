@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.jok.game.pool"
-        version   = "0.1.15">
+        version   = "1.0">
     <name>Jok Pool</name>
 
     <description>
@@ -37,7 +37,7 @@
     <preference name="webviewbounce"    value="false" />
     <preference name="stay-in-webview"  value="true" />
     <preference name="prerendered-icon" value="true" />
-
+    <preference name="exit-on-suspend" value="true" />
 
 
     <icon src="icon.png" />
@@ -75,7 +75,5 @@
         <param name="APP_ID" value="528732163816152" />
         <param name="APP_NAME" value="5ffd5e05c3c6008ea04867a5298af37c" />
     </gap:plugin>
-    
-    <gap:plugin name="com.phonegap.plugins.jokutils" />
 
 </widget>
