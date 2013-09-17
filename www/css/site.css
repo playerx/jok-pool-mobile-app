@@ -17,3 +17,12 @@
     margin-top: -20px;
     text-align: center;
 }
+
+#NoInternetConnection {
+	text-align: center;
+	color: gray;
+	padding-top: 20px;
+}
+#NoInternetConnection i {
+	font-size: 50px;
+}

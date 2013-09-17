@@ -32,14 +32,12 @@ function navigate(url) {
             
             $('#MobileSiteContentLoadingBox').remove();
             
-            alert(err);
+            var noConnectionHtml = $('<div id="NoInternetConnection"></div>');
+            noConnectionHtml.append('<i class="icon-meh"></i><br/><br/>');
+            noConnectionHtml.append('No internet connection, please check internet settings and press retry button below<br/><br/>');
+            noConnectionHtml.append('<a class="btn btn-warning" href="javascript:document.location.reload()">Retry</a>');
             
-            // navigator.notification.confirm(
-            //     'Can''t load data, please check internet connection. Try again?', // message
-            //      onConfirm,             // callback to invoke with index of button pressed
-            //     'Oops',                 // title
-            //     'No,Yes'                // buttonLabels
-            // );
+            $('body').html(noConnectionHtml);
         }
     });
     
