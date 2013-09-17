@@ -23,7 +23,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 		
 		<script>
-            var ROOT_LOCATION = 'http://test.jok.io';
+            var ROOT_LOCATION = 'http://jok.io';
             
             function onLoad() {
                 document.addEventListener('deviceready', onDeviceReady, false);
@@ -32,7 +32,13 @@
             function onDeviceReady() {
                 console.log('Device is ready!')
                 
-                navigate('/mobile/GameLobby?game=billiard&deviceid=' + device.uuid);
+                var navigateLocation = document.location.hash.replace('#', '');
+                
+                if (!navigateLocation) {
+                    navigateLocation = '/mobile/GameLobby?game=billiard&deviceid=' + device.uuid;
+                }
+                
+                navigate(navigateLocation);
             }
         </script>
     </head>
