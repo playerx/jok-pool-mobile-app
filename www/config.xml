@@ -38,6 +38,8 @@
     <preference name="stay-in-webview"  value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="exit-on-suspend" value="true" />
+    <!-- Android -->
+    <preference name="android-minSdkVersion" value="11" />
 
 
     <icon src="icon.png" />
