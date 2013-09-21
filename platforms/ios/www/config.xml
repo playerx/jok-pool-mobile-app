@@ -7,14 +7,14 @@
     <name>Jok Pool</name>
 
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Online Pool Game
     </description>
 
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contact@jok.io" href="http://jok.io">
+        Jok Entertainment
     </author>
 
-    <content src="http://jok.io/mobile/gamelobby" />
+    <content src="index.html" />
 
     <access origin="*" />
 
@@ -23,7 +23,7 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="TopActivityIndicator" value="whiteLarge" />
     <preference name="EnableLocation" value="false" />
-    <preference name="EnableViewportScale" value="false" />
+    <preference name="EnableViewportScale" value="true" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />

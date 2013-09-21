@@ -2,10 +2,6 @@
 
 function navigate(url) {
 
-    try{
-
-        alert('asd');
-
         if (!url) return;
         
         // ჩატვირთვის ანიმაციის გამოჩენა
@@ -50,10 +46,6 @@ function navigate(url) {
             
         //     navigate(url);
         // }
-    }
-    catch (err) {
-        alert(err);
-    }
 }
 
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
