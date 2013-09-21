@@ -55,6 +55,9 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 		05FF198FAAF44DDEBBAC6C9E /* CDVJokUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BB119D88D843C8A3484B44 /* CDVJokUtils.m */; };
+		6EA228E455084CE0895337D1 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C925C294D749ADBE7F9E3F /* CDVVibration.m */; };
+		3EB40027B4E64FA29B53DBD7 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E1EBB68E942A69AE11090 /* CDVNotification.m */; };
+		8AC2D130EAE1489F95587D72 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 500E63D359684AB6AAA83A93 /* CDVNotification.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,11 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Jok Pool/config.xml"; sourceTree = "<group>"; };
 		76BB119D88D843C8A3484B44 /* CDVJokUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVJokUtils.m"; path = "com.phonegap.plugins.jokutils/CDVJokUtils.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		9F90876497E9418C99C81B9B /* CDVJokUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVJokUtils.h"; path = "com.phonegap.plugins.jokutils/CDVJokUtils.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		A9C925C294D749ADBE7F9E3F /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.core.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		D7DD016033C9404EA63269B5 /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.core.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		783E1EBB68E942A69AE11090 /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.core.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		8DEAF3A0A1AE472EAC9FC7EB /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.core.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		500E63D359684AB6AAA83A93 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* Jok Pool-Info.plist */,
+				500E63D359684AB6AAA83A93 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = "Jok Pool/Resources";
@@ -286,6 +295,10 @@
 				E110A58878174CF8AB1B46B0 /* CDVSound.h */,
 				76BB119D88D843C8A3484B44 /* CDVJokUtils.m */,
 				9F90876497E9418C99C81B9B /* CDVJokUtils.h */,
+				A9C925C294D749ADBE7F9E3F /* CDVVibration.m */,
+				D7DD016033C9404EA63269B5 /* CDVVibration.h */,
+				783E1EBB68E942A69AE11090 /* CDVNotification.m */,
+				8DEAF3A0A1AE472EAC9FC7EB /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = "Jok Pool/Plugins";
@@ -436,6 +449,7 @@
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
 				C589A44A17ED7EA700D63C40 /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				8AC2D130EAE1489F95587D72 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +483,8 @@
 				A20F39D3F53344F4A79CD237 /* CDVDevice.m in Sources */,
 				62D10163366640ABAAA80785 /* CDVSound.m in Sources */,
 				05FF198FAAF44DDEBBAC6C9E /* CDVJokUtils.m in Sources */,
+				6EA228E455084CE0895337D1 /* CDVVibration.m in Sources */,
+				3EB40027B4E64FA29B53DBD7 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

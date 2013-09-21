@@ -20,6 +20,12 @@
     <feature name="JokUtils">
         <param name="ios-package" value="CDVJokUtils" />
     </feature>
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <access origin="*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />
@@ -34,4 +40,5 @@
     <preference name="OpenAllWhitelistURLsInWebView" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="fullscreen" value="true" />
+    <preference name="exit-on-suspend" value="true" />
 </widget>

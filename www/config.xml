@@ -14,7 +14,7 @@
         Jok Entertainment
     </author>
 
-    <content src="index.html" />
+    <content src="http://jok.io/mobile/gamelobb/" />
 
     <access origin="*" />
 
