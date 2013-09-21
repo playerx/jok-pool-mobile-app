@@ -26,5 +26,5 @@
 + (NSString*)cordovaVersion;
 
 - (void)getDeviceInfo:(CDVInvokedUrlCommand*)command;
-
+    
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.phonegap.plugins.jokutils"
         version="0.1.0">
 
@@ -11,23 +11,24 @@
     </description>
     
     <license>MIT</license>
-
-    <asset src="www/jokutils.js" target="js/jokutils.js" />
     
     <engines>
-        <engine name="cordova" version=">=2.3.0" />
+        <engine name="cordova" version=">=3.0.0" />
     </engines>
 
     <!-- ios -->
     <platform name="ios">
-    
-        <plugins-plist key="JokUtils" string="CDVJokUtils" />
 
-        <header-file src="SoundPlug.h" />
-        <header-file src="ScreenOrientation.h" />
+        <config-file target="config.xml" parent="/*">
+             <feature name="JokUtils">
+                 <param name="ios-package" value="CDVJokUtils" /> 
+             </feature>
+        </config-file>
 
-        <source-file src="SoundPlug.m" />
-        <source-file src="ScreenOrientation.m" />
+        <header-file src="src/ios/CDVJokUtils.h" />
+
+        <source-file src="src/ios/CDVJokUtils.m" />
         
     </platform>
+
 </plugin>
