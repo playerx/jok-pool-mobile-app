@@ -45,4 +45,10 @@
     }
 }
 
+- (void)showAds:(CDVInvokedUrlCommand*)command
+{
+    [[Chartboost sharedChartboost] showInterstitial:CBLocationGameScreen];
+}
+
+
 @end

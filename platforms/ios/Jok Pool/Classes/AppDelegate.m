@@ -56,6 +56,17 @@
     return self;
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    // Begin a user session. Must not be dependent on user actions or any prior network requests.
+    // Must be called every time your app becomes active.
+    [Chartboost startWithAppId:@"53db3f9589b0bb2ea06b9891" appSignature:@"d65d72597645f87a15427c096b1a5caac67dc62f" delegate:self];
+    
+    // Show an ad at location "CBLocationHomeScreen"
+    //[[Chartboost sharedChartboost] showInterstitial:CBLocationHomeScreen];
+}
+
+
 #pragma mark UIApplicationDelegate implementation
 
 /**
@@ -87,6 +98,13 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
+    //note: iOS only allows one crash reporting tool per app; if using another, set to: NO
+    [Flurry setCrashReportingEnabled:YES];
+    
+    // Replace YOUR_API_KEY with the api key in the downloaded package
+    [Flurry startSession:@"CZWMWFHFSX5H6K6G7Y9J"];
 
     return YES;
 }

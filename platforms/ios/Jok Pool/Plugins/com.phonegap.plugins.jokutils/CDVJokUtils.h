@@ -9,8 +9,12 @@
 #import <Cordova/CDVPlugin.h>
 #import <AudioToolbox/AudioServices.h>
 
+#import "Chartboost.h"
+
 @interface CDVJokUtils : CDVPlugin
     
 - (void)playAudio:(CDVInvokedUrlCommand*)command;
+
+- (void)showAds:(CDVInvokedUrlCommand*)command;
     
 @end
